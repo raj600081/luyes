@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mini calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+        <form>
+            <div class="display">
+            
+        <input type="type" id="display">
+        </div>
+
+    
+        <div>
+        <input type="button"  onclick="keys('1')" value="1">
+        
+        
+        <input type="button" onclick="keys('2')" value="2">
+        <input type="button" onclick="keys('3')" value="3">
+        <input type="button"  onclick="keys('4') "value="4">
+        </div>
+        <div>
+        <input type="button" onclick="keys('5') " value="5">
+        <input type="button" onclick="keys('6') " value="6">
+        <input type="button" onclick="keys('7') " value="7">
+        <input type="button" onclick="keys('8') " value="8">
+        </div>
+            <div>
+        <input type="button" onclick="keys('9') " value="9">
+        <input type="button"onclick="keys('0') " value="0">
+        <input type="button" onclick="keys('+') " value="+">
+        <input type="button" onclick="keys('-') " value="-">
+        </div>
+        <div>
+        <input type="button" onclick="keys('*') " value="*">
+    
+    
+        <input type="button" onclick="keys('/')" value="/">
+        <input type="button"  onclick="equal('=')"   value="=">
+        <input type="button" onclick="keys('.')" value="."> 
+        <div>
+        <input type="button" onclick="delect('del')" value="del">
+         
+              <input type="button"  value="AC" onclick="display.value='' "> 
+        </div>
+    </div>
+
+    </div>
+    </div>
+    
+
+  <script>
+     let number = document.getElementById("display")
+
+     function keys(variable) {
+        number.value +=variable
+     }
+     function delect(del) {
+        number.value =('')
+        
+     }
+function equal() {
+ number.value = eval(number.value)    
+}
+
+  </script>  
+</body>
+</html>
